@@ -19,14 +19,23 @@ body {
     flex-direction: row;
 }
 
+/***** HEADER *****/
 header {
     display: flex;
     flex-direction: row;
 }
 
+#navigation {
+    list-style: none;
+}
+
+.nav-link {
+    display: inline-flex;
+    padding: 15px;
+}
+
 #site {
-    display: flex;
-    flex-direction: row;
+    
 }
 
 #content {
@@ -39,4 +48,12 @@ header {
 
 #footer {
     
+}
+
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+    .row {
+      flex-direction: column;
+    }
 }
