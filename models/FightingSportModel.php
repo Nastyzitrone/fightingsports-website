@@ -13,7 +13,7 @@ class FightingSportModel extends BaseModel {
     public function getAllFightingSports() {
         $pdo = $this->getPDO();
         $stmt = $pdo->query('SELECT bezeichnung FROM kampfsportarten');
-        $result = null;      // TODO wirte ResultService
+        $result = null;      // TODO write ResultService
         $counter = 0;
         while ($row = $stmt->fetch())
         {

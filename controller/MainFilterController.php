@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 require_once('../models/FightingSportModel.php');
 // require model
 class MainFilterController {
@@ -10,8 +11,8 @@ class MainFilterController {
     }
     
     public function showData($postData){
-        $postData['test'] = $this->model->test();
-        return "here rin controller".json_encode($postData);
+        $resultData = $this->model->getAllFightingSports();
+        return json_encode($resultData);
         
     }
 }

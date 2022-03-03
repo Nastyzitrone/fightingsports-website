@@ -1,10 +1,20 @@
 <?php
-
     if(isset($_POST['action']) && !empty($_POST['action'])) {
         if($_POST['action'] == 'filter') {
             require_once('../controller/MainFilterController.php');
+            require_once('DBConnectionService.php');
             $controller = new MainFilterController();
-            echo $controller->showData($_POST);
+            $dbService = new DBConnectionService();
+            try {
+                var_dump($controller->showData($_POST));
+                echo 'success'; 
+            }
+            catch (\Error $e) {
+                http_response_code(500);
+                echo $e->getMessage();
+            }
+            
+            //echo $controller->showData($_POST);
 
             //echo json_encode(array("blablabla"=>"Hallo WElt", "test" => $_POST['fname']));
         } else {
