@@ -25,19 +25,21 @@ $(document).ready(function () {
 function makeHTMLResult(data){
     let nl = '\n';
     let s='';
-	s +='<div class="sport-item">' + nl;
+	s +='<div class="sport-items-container">' + nl;
     
     
-    s +='<div class="sport-item">' + nl;
-    s +='<div class="sport-item">' + nl;
-	s +='<tr>' + nl;
+   
+   
+	
 
     for (const key in data){
         var entry = data[key];
-        s +='<div class="sport-item-attribute">' + nl;
+        s +='<div class="sport-item">' + nl;
         for (const col in entry){
+            s +='<div class="sport-item-attribute">' + nl;
             s +='<div class="sport-item-attribute-label">' + col + '</div>';
             s +='<div class="sport-item-attribute-value">' + entry[col] + '</div>';
+            s +='</div>' + nl;
             console.log(`${col} : ${entry[col]}`);
         }
 

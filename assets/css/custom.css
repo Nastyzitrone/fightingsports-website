@@ -44,6 +44,22 @@ header {
 #content {
 
 }
+.sport-items-container {
+    background-color: blueviolet;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.sport-item {
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.sport-item-attribute {
+    display: flex;
+    flex-direction: row;
+}
 
 #option-panel {
     border-right: 1px solid black;
