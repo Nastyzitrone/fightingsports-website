@@ -1,0 +1,42 @@
+body {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    box-sizing: border-box;
+    background-color: aqua;
+    flex-direction: column;
+}
+
+.col {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+#site {
+    display: flex;
+    flex-direction: row;
+}
+
+#content {
+
+}
+
+#option-panel {
+
+}
+
+#footer {
+    
+}
