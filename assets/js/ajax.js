@@ -3,10 +3,10 @@ $(document).ready(function () {
       var formData = $("#form1").serializeArray();
       formData.push({name: 'action' , value: $("#form1").attr('action')});
       
-      console.log(formData);
+      
       $.ajax({
         type: "POST",
-        url: "../controller/StartController.php",
+        url: "../services/MiddlewareService.php",
         data: formData,
         dataType: "json",
         encode: true,
