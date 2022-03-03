@@ -6,8 +6,8 @@
             $controller = new MainFilterController();
             $dbService = new DBConnectionService();
             try {
-                var_dump($controller->showData($_POST));
-                echo 'success'; 
+                
+                echo $controller->showData($_POST); 
             }
             catch (\Error $e) {
                 http_response_code(500);
