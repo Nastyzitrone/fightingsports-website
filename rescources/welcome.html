@@ -31,10 +31,19 @@
         </header>
         <div id="site" class="row">
             <div id="option-panel" class="col">
-                optionpanel
+               
+                <form id="form1" method="POST">
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname">
+                    <buuton type="submit" value="New Customer" />
+                    </form>
+                <button type="submit" form="form1" value="Submit">Filter anwenden</button>
             </div>
             <div id="content" class="col">
                 content
+                <div class="description"></div>
             </div>
         </div>
         <div id="footer" class="">
