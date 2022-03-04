@@ -10,9 +10,14 @@ class MainFilterController {
         $this->model = new FightingSportModel();
     }
     
-    public function showData($postData){
+    public function getFilteredData($postData){
         $resultData = $this->model->getAllFightingSports();
-        return json_encode($resultData);
+        return json_encode($resultData); 
+    }
+
+    public function getFilterMetaData(){
         
+        $resultData['appearencesPerCountry'] = $this->model->getAppaerencesPerCountry();
+        return json_encode($resultData['appearencesPerCountry']); 
     }
 }

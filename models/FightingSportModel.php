@@ -39,5 +39,14 @@ class FightingSportModel extends BaseModel {
         return $table_fields;
     }
 
+    public function getAppaerencesPerCountry() {
+        $pdo = $this->getPDO();
+        $q = $pdo->prepare("SELECT COUNT(BEZEICHNUNG) 'AMOUNT',HERKUNFTSLAND FROM KAMPFSPORTARTEN GROUP BY HERKUNFTSLAND");
+        $q->execute();
+        $table_fields = $q->fetchAll();
+
+        return $table_fields;
+    }
+
    
 }

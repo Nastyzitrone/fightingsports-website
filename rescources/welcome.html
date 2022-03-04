@@ -6,6 +6,7 @@
 		<meta name="author" content="Administrator"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<link rel="stylesheet" type="text/css"  href="../assets/css/custom.css" title="custom-style"/>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'rel='stylesheet'type='text/css'>
 	</head>
 
 	<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
@@ -33,10 +34,13 @@
             <div id="option-panel" class="col">
                
                 <form id="form1" action="filter" method="POST">
+                    <div id="checkbox-container-countries"></div>
                     <label for="fname">First name:</label>
                     <input type="text" id="fname" name="fname"><br><br>
                     <label for="lname">Last name:</label>
                     <input type="text" id="lname" name="lname">
+                    <input type="checkbox" id="continent-south-africa" name="continent-south-africa" value="SouthAfrica">
+                    <label for="vehicle1"> Afrika</label><br>    
                     <button type="submit" value="New Customer">filter</button>
                 
                     </form>
