@@ -4,6 +4,7 @@ body {
     box-sizing: border-box;
     background-color: aqua;
     flex-direction: column;
+    overflow:hidden;
 }
 
 .col {
@@ -44,16 +45,29 @@ header {
 #content {
 
 }
+
+.sport-item-image {
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 400px;
+}
 .sport-items-container {
     background-color: blueviolet;
     padding: 15px;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
 }
 .sport-item {
     border-bottom: 1px solid black;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    padding: 15px;
+}
+
+.sport-item:last-child {
+    border-bottom: none;
 }
 
 .sport-item-attribute {
@@ -71,6 +85,13 @@ header {
     border-top: 1px solid black;
 }
 
+
+.footer-box {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+
+}
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 @media (max-width: 800px) {
