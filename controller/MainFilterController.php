@@ -16,8 +16,7 @@ class MainFilterController {
     }
 
     public function getFilterMetaData(){
-        
-        $resultData['appearencesPerCountry'] = $this->model->getAppaerencesPerCountry();
+        $resultData['appearencesPerCountry'] = $this->odel->getAppaerencesPerCountry();
         return json_encode($resultData['appearencesPerCountry']); 
     }
 }
