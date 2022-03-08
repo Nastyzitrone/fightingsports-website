@@ -6,11 +6,13 @@
 		<meta name="author" content="Administrator"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<link rel="stylesheet" type="text/css"  href="../assets/css/custom.css" title="custom-style"/>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'rel='stylesheet'type='text/css'>
 	</head>
-
+    
 	<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="../assets/js/ajax.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 
 	<script type="text/javascript">
     </script>
@@ -34,11 +36,13 @@
             <div id="option-panel" class="col">
                
                 <form id="form1" action="filter" method="POST">
+                    <label for="start-year">Bis: </label>
+                    <input type="text" id="start-year" name="start-year"><br><br>
+                    <label for="end-year">Von: </label>
+                    <input type="text" id="end-year" name="end-year"><br>
+                    Teilnehmeranzahl: <span id='range'></span>
+                    <div id="range-slider"></div>
                     <div id="checkbox-container-countries"></div>
-                    <label for="fname">First name:</label>
-                    <input type="text" id="fname" name="fname"><br><br>
-                    <label for="lname">Last name:</label>
-                    <input type="text" id="lname" name="lname">
                     <input type="checkbox" id="continent-south-africa" name="continent-south-africa" value="SouthAfrica">
                     <label for="vehicle1"> Afrika</label><br>    
                     <button type="submit" value="New Customer">filter</button>
