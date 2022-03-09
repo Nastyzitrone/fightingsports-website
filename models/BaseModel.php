@@ -1,5 +1,4 @@
 <?php
-
 require_once('../services/DBConnectionService.php');
 
 abstract class BaseModel {

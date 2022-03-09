@@ -13,9 +13,11 @@ class FightingSportModel extends BaseModel {
     public function getAllFightingSports() {
         $pdo = $this->getPDO();
         $stmt = $pdo->query('SELECT * FROM kampfsportarten');
-        $result = null;      // TODO write ResultService
+        $result = null;   
+        // TODO write ResultService and use prepared Statements   
         $counter = 0;
         $fightingSportsColNames = $this->getFightingSportsMeta();
+
         while ($row = $stmt->fetch())
         {
 
@@ -30,6 +32,9 @@ class FightingSportModel extends BaseModel {
         return $result;
     }
 
+    /**
+     * Returns the fightingsport table meta data
+     */
     public function getFightingSportsMeta() {
         $pdo = $this->getPDO();
         $q = $pdo->prepare("DESCRIBE kampfsportarten");
@@ -39,6 +44,9 @@ class FightingSportModel extends BaseModel {
         return $table_fields;
     }
 
+    /**
+     * Returns all countries and the amount of fighting sports 
+     */
     public function getAppaerencesPerCountry() {
         $pdo = $this->getPDO();
         $q = $pdo->prepare("SELECT COUNT(BEZEICHNUNG) 'AMOUNT',HERKUNFTSLAND FROM KAMPFSPORTARTEN GROUP BY HERKUNFTSLAND");

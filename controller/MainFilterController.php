@@ -1,7 +1,12 @@
 <?php
 error_reporting(E_ALL);
 require_once('../models/FightingSportModel.php');
-// require model
+/**
+ * 
+ * This Controller class handles every request
+ * which is about the Mainsite filter Data
+ * and prepares the Data for JavaScript action
+ */
 class MainFilterController {
 
     private $model = null; 
@@ -16,7 +21,7 @@ class MainFilterController {
     }
 
     public function getFilterMetaData(){
-        $resultData['appearencesPerCountry'] = $this->odel->getAppaerencesPerCountry();
+        $resultData['appearencesPerCountry'] = $this->model->getAppaerencesPerCountry();
         return json_encode($resultData['appearencesPerCountry']); 
     }
 }
